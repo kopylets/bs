@@ -71,6 +71,9 @@ class Contractor
     #[ORM\OneToOne(targetEntity: Location::class)]
     private Location $location;
 
+    #[ORM\OneToMany(mappedBy: 'contractor', targetEntity: ManagerContractorCommunicationRequest::class)]
+    private Collection $managerCommunicationRequests;
+
     public function getId(): ?int
     {
         return $this->id;

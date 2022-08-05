@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\ManagerCommunicateRequest;
+use App\Entity\ManagerContractorCommunicationRequest;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ManagerCommunicateRequest>
+ * @extends ServiceEntityRepository<ManagerContractorCommunicationRequest>
  *
- * @method ManagerCommunicateRequest|null find($id, $lockMode = null, $lockVersion = null)
- * @method ManagerCommunicateRequest|null findOneBy(array $criteria, array $orderBy = null)
- * @method ManagerCommunicateRequest[]    findAll()
- * @method ManagerCommunicateRequest[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method ManagerContractorCommunicationRequest|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ManagerContractorCommunicationRequest|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ManagerContractorCommunicationRequest[]    findAll()
+ * @method ManagerContractorCommunicationRequest[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ManagerCommunicateRequestRepository extends ServiceEntityRepository
+class ManagerContractorCommunicationRequestRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ManagerCommunicateRequest::class);
+        parent::__construct($registry, ManagerContractorCommunicationRequest::class);
     }
 
-    public function add(ManagerCommunicateRequest $entity, bool $flush = false): void
+    public function add(ManagerContractorCommunicationRequest $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class ManagerCommunicateRequestRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(ManagerCommunicateRequest $entity, bool $flush = false): void
+    public function remove(ManagerContractorCommunicationRequest $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class ManagerCommunicateRequestRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return ManagerCommunicateRequest[] Returns an array of ManagerCommunicateRequest objects
+//     * @return ManagerContractorCommunicationRequest[] Returns an array of ManagerContractorCommunicationRequest objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class ManagerCommunicateRequestRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?ManagerCommunicateRequest
+//    public function findOneBySomeField($value): ?ManagerContractorCommunicationRequest
 //    {
 //        return $this->createQueryBuilder('m')
 //            ->andWhere('m.exampleField = :val')
